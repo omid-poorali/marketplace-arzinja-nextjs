@@ -1,0 +1,102 @@
+.uiModal {
+
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+
+
+    &-overlay {
+        background: var(--overlay-color);
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+    }
+
+    &-container {
+        height: 100%;
+        outline: 0;
+        overflow-x: hidden;
+        overflow-y: auto;
+        text-align: center;
+    }
+
+    /* Used to trick the browser to center the modal content properly  */
+    &-containerCenter:after {
+        width: 0;
+        height: 100%;
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    &-modal {
+        border-radius: 0.5rem;
+        max-width: var(--max-width);
+        display: inline-block;
+        vertical-align: middle;
+        text-align: right;
+        background: var(--element-color);
+        margin: 1.2rem;
+        padding: 1.2rem;
+        position: relative;
+        overflow-y: auto;
+    }
+
+
+    /* Used to fix a screen glitch issues with the animation see https://github.com/pradel/react-responsive-modal/issues/495 */
+    &-overlay,
+    &-container,
+    &-modal {
+        animation-fill-mode: forwards !important;
+    }
+}
+
+@keyframes uiModal-overlay-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes uiModal-overlay-out {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes uiModal-modal-in {
+    0% {
+        transform: scale(0.96);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(100%);
+        opacity: 1;
+    }
+}
+
+@keyframes uiModal-modal-out {
+    0% {
+        transform: scale(100%);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(0.96);
+        opacity: 0;
+    }
+}

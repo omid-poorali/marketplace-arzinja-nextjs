@@ -1,0 +1,16 @@
+.uiUserMenu {
+
+    padding: 0.25rem 1rem;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    border: none;
+    border-radius: 0.25rem;
+
+    &:hover {
+        background-color: var(--hover-background-color);
+    }
+
+}

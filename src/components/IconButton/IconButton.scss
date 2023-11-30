@@ -1,0 +1,16 @@
+.uiIconButton {
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background: none;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+
+    &:hover {
+        background-color: var(--hover-background-color);
+    }
+}

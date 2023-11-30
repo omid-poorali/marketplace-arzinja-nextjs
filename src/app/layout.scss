@@ -1,0 +1,44 @@
+.HomeLayout {
+
+    &-header {
+        max-width: var(--max-width);
+        margin: auto;
+        width: 95vw;
+        position: fixed;
+        top: 1rem;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    &-tabs {
+        background-color: var(--background-color);
+        position: fixed;
+        width: 95vw;
+        max-width: var(--max-width);
+        max-height: 3rem;
+        min-height: 3rem;
+        margin: auto;
+        z-index: 3;
+        left: 50%;
+        transform: translate(-50%);
+        top: 5.5rem;
+    }
+
+    &-curtain {
+        height: 9rem;
+        background-color: var(--background-color);
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 2;
+    }
+
+    &-body {
+        margin: auto;
+        margin-bottom: 2rem;
+        width: 95vw;
+        max-width: var(--max-width);
+    }
+
+}

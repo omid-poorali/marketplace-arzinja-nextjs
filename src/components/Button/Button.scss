@@ -1,0 +1,11 @@
+.uiButton {
+    cursor: pointer;
+    color: #fff;
+    background-color: var(--primary-800);
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.5rem;
+
+    &:hover {
+        background-color: var(--primary-700);
+    }
+}

@@ -1,0 +1,34 @@
+.uiHeader {
+    min-height: 4.5rem;
+    max-height: 4.5rem;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    color: #fff;
+    background-color: var(--primary-800);
+    border-radius: 0.5rem;
+
+    &-logo {
+        margin-left: 3rem;
+    }
+
+    &-title {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0,0,0,0);
+        border: 0;
+    }
+
+    &-side {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

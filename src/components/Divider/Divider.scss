@@ -1,0 +1,26 @@
+.uiDivider {
+
+  padding: 0;
+  background: var(--divider-color);
+
+  &-vertical {
+    margin: 0 0.5rem;
+    display: inline-block;
+    height: 0.9em;
+    width: 1px;
+    vertical-align: middle;
+    position: relative;
+    top: -0.06em;
+  }
+
+  &-horizontal {
+    height: 1px;
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+
+  &-dashed {
+    background: none;
+    border-top: 1px dashed var(--divider-color);
+  }
+}
