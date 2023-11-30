@@ -1,4 +1,4 @@
-import '@/styles/main.scss';
+import '@/styles/index.scss';
 import type { Metadata } from 'next';
 import { Header } from '@/components';
 import { Tabs } from './Tabs';

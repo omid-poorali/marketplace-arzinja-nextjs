@@ -1,3 +1,4 @@
+export * as String from './string';
 export * as Route from './route';
 export * as DOM from './dom';
 export * as UUID from './uuid';

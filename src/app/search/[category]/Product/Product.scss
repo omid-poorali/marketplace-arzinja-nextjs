@@ -1,0 +1,39 @@
+.HomeProduct {
+
+    &-article {
+        padding: 0.5rem;
+        position: relative;
+        border-radius: 0.5rem;
+        background-color: var(--element-color);
+        box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+
+        width: 15rem;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    &-square {
+        position: relative;
+        width: 100%;
+        padding-top: 100%;
+    }
+
+    &-title {
+        text-align: center;
+        padding: 0.5rem;
+        font-size: 0.75rem;
+        font-weight: 400;
+    }
+
+    &-price {
+        padding-bottom: 0.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &-priceNumber {
+        padding: 0 0.2rem;
+    }
+}

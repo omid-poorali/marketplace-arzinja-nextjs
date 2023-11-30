@@ -2,7 +2,7 @@ import * as Models from '@/models';
 
 export type GetProductsRequest = {
     lastCursor?: string;
-    category?: string;
+    category: string;
 };
 
 export type GetProductsResponse = {

@@ -6,7 +6,7 @@
     "check:types": "tsc --noEmit",
     "start:dev": "next dev",
     "build": "next build",
-    "start:pro": "next start",
+    "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {

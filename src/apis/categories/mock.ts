@@ -10,7 +10,7 @@ export const get = async (_payload: GetCategoriesRequest) => new Promise<GetCate
         id: "uuid1",
         title: "موبایل",
         image: {
-          src: "/images/mobile.png",
+          src: "/images/categories/mobile.png",
           alt: "mobile"
         }
       },
@@ -18,7 +18,7 @@ export const get = async (_payload: GetCategoriesRequest) => new Promise<GetCate
         id: "uuid2",
         title: "ورزشی",
         image: {
-          src: "/images/sport.png",
+          src: "/images/categories/sport.png",
           alt: "sport"
         }
       }
