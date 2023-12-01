@@ -12,7 +12,7 @@ describe("Error component tests", () => {
         expect(screen.getByRole("heading", { level: 2, name: "title" })).toBeInTheDocument();
         expect(screen.getByRole("button").textContent?.includes("button")).toBe(true);
         fireEvent.click(screen.getByRole("button"));
-        expect(handleClick).toBeCalled();
+        expect(handleClick).toHaveBeenCalled();
 
     });
 
