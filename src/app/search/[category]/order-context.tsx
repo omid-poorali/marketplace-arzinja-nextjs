@@ -1,9 +1,12 @@
 'use client'
 
+import { useRouter } from "next/navigation";
 import { createContext, useContext, useMemo, useState } from "react";
-import * as Models from "@/models";
 import { OrderDialog } from "./OrderDialog";
+import { Routes } from "@/constants";
+import * as Models from "@/models";
 import * as APIs from "@/apis";
+
 
 const initialDialogState = {
     open: false,
@@ -29,6 +32,8 @@ export const OrderProvider = (props: PropsType) => {
 
     const { children } = props;
 
+    const router = useRouter();
+
     const [dialog, setDialog] = useState<OrderDialog>(initialDialogState);
 
     const createOrder: OrderContext["createOrder"] = product => {
@@ -45,7 +50,10 @@ export const OrderProvider = (props: PropsType) => {
     }
 
     const handleSubmit = (data: Models.NewOrder) => {
-        console.log(data);
+        APIs.orders.createOrder(data).then(() => {
+            setDialog(() => initialDialogState);
+            router.replace(Routes.ORDERS)
+        });
     }
 
     return (
