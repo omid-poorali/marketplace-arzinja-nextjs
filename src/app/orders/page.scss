@@ -1,4 +1,17 @@
+@import './Order/Order.scss';
+
 .OrdersPage {
-    margin-top: 9.5rem;
     width: 100%;
+    margin-top: 9.5rem;
+    padding-bottom: 1rem;
+
+    &-list {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 2rem;
+    }
 }

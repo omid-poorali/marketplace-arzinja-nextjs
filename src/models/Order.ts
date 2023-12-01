@@ -1,8 +1,15 @@
 import { Product } from ".";
 
+export enum OrderStatus {
+    PENDING = 'pending',
+    IN_PROGRESS = 'in-process',
+    DELIVERY = 'delivery',
+    DELIVERED = 'delivered'
+}
+
 export type Order = {
     id: string;
-    status: 'pending' | 'in-process' | 'delivery' | 'delivered';
+    status: OrderStatus;
     product: Product;
     address: {
         lat: number;

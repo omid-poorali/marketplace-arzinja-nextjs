@@ -1,0 +1,52 @@
+.Order {
+
+    &-article {
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        background-color: var(--element-color);
+        box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+
+        display: flex;
+        flex-direction: row;
+    }
+
+    &-imageContainer {
+        width: 10rem;
+        height: 10rem;
+    }
+
+    &-square {
+        position: relative;
+        width: 100%;
+        padding-top: 100%;
+    }
+
+    &-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &-title {
+        text-align: center;
+        padding: 0.5rem;
+        font-size: 0.75rem;
+        font-weight: 400;
+    }
+
+    &-price {
+        padding-bottom: 0.5rem;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    &-priceNumber {
+        padding: 0 0.2rem;
+    }
+
+    &-status {
+        width: 10%;
+        margin-top: auto;
+    }
+
+}

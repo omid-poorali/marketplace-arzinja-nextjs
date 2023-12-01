@@ -17,14 +17,14 @@ const markerIcon = Leaflet.icon({
 
 
 type PropsType = {
-    className: string;
+    className?: string;
     defaultValue?: { lat: number; lng: number };
     value?: { lat: number; lng: number };
     onChange?(arg: { lat: number; lng: number }): void;
 };
 
 
-export const MapInput = (props: PropsType) => {
+export default function MapInput(props: PropsType) {
 
     const {
         className,
@@ -73,5 +73,3 @@ export const MapInput = (props: PropsType) => {
 
     return <div className={clsx("uiMapInput", className)} ref={mapContainer} />;
 }
-
-MapInput.displayName = "MapInput";

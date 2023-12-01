@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { Divider, TabMenu } from "@/components";
 import { Routes } from '@/constants';
 import { Option } from '@/types';
@@ -21,6 +21,7 @@ export const Tabs = (props: PropsType) => {
 
     const { className } = props;
 
+    const router = useRouter();
     const pathname = usePathname();
     const [activeTab, setActiveTab] = useState(() => {
         if (pathname === Routes.HOME) {
@@ -32,6 +33,10 @@ export const Tabs = (props: PropsType) => {
 
     const handleChange = ({ value }: { value: string }) => {
         setActiveTab(() => value);
+        if (value === "search") {
+            router.replace(Routes.HOME);
+        }
+        else router.replace(Routes.ORDERS);
     };
 
     const classes = {
