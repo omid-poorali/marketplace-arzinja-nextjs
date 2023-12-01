@@ -1,5 +1,5 @@
-import "./Products.scss";
 import React from "react";
+import { OrderProvider } from "../order-context";
 import { HomeProduct } from "../Product";
 import clsx from "clsx";
 import * as APIs from "@/apis";
@@ -27,12 +27,14 @@ export const Products = async (props: PropsType) => {
     }
 
     return (
-        <main className={classes.root}>
-            <ul className={classes.list}>
-                {React.Children.toArray(Products.map(category => (
-                    <HomeProduct {...category} />
-                )))}
-            </ul>
-        </main>
+        <OrderProvider>
+            <main className={classes.root}>
+                <ul className={classes.list}>
+                    {React.Children.toArray(Products.map(category => (
+                        <HomeProduct {...category} />
+                    )))}
+                </ul>
+            </main>
+        </OrderProvider>
     )
 }

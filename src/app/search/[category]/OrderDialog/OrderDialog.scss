@@ -1,0 +1,14 @@
+.HomeOrderDialog {
+
+    &-title {
+        padding: 0.5rem;
+    }
+
+    &-buttonWrapper {
+        padding-top: 0.5rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

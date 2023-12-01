@@ -2,10 +2,10 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Routes } from "@/constants";
+import { BuyButton } from "./BuyButton";
 import clsx from "clsx";
 import * as Models from "@/models";
 import * as Utils from '@/utils';
-import { Button } from "@/components";
 
 type CustomProps = Models.Product;
 
@@ -47,7 +47,7 @@ export const HomeProduct = React.forwardRef((props: PropsType, forwardedRef: Rea
                         <span className={classes.priceNumber}>{Utils.String.numberWithCommas(price)}</span>
                         <span>تومان</span>
                     </div>
-                    <Button>خرید</Button>
+                    <BuyButton {...{ id, title, price, image }} />
                 </article>
             </Link>
         </li>
