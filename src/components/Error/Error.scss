@@ -1,0 +1,15 @@
+.uiError {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--nunito);
+    background-color: var(--background-color);
+    color: var(--text-color);
+
+    &-button {
+        margin-top: 1rem;
+    }
+}

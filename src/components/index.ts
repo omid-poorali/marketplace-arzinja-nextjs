@@ -8,3 +8,5 @@ export * from './Modal';
 export * from './Button';
 export * from './Spinner';
 export * from './MapInput';
+export * from './Error';
+export * from './Loading';
